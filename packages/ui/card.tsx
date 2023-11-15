@@ -2,17 +2,19 @@ import * as React from 'react';
 import classes from './card.module.css';
 
 export function Card({
+  className,
   title,
   children,
   href,
 }: {
+  className?: string;
   title: string;
   children: React.ReactNode;
   href: string;
 }): JSX.Element {
   return (
     <a
-      className={classes.red}
+      className={`${className} ${classes.red}`}
       href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
       rel="noopener noreferrer"
       target="_blank"
